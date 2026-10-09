@@ -1,0 +1,84 @@
+
+<style>
+  .palette-wrap { padding: 1.5rem 0; }
+  .section-label { font-size: 12px; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.08em; margin: 1.5rem 0 0.75rem; font-weight: 500; }
+  .swatches { display: flex; gap: 12px; flex-wrap: wrap; }
+  .swatch { display: flex; flex-direction: column; gap: 6px; min-width: 90px; }
+  .swatch-block { width: 90px; height: 64px; border-radius: 8px; border: 0.5px solid rgba(0,0,0,0.08); }
+  .swatch-name { font-size: 12px; color: var(--color-text-primary); font-weight: 500; }
+  .swatch-hex { font-size: 11px; color: var(--color-text-secondary); font-family: monospace; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+  .note { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-top: 1.5rem; }
+</style>
+
+<div class="palette-wrap">
+  <div class="section-label">Couleurs principales</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#0A0A0A;"></div>
+      <div class="swatch-name">Noir profond</div>
+      <div class="swatch-hex">#0A0A0A</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#111111;"></div>
+      <div class="swatch-name">Fond sombre</div>
+      <div class="swatch-hex">#111111</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#FFFFFF; border: 0.5px solid #ddd;"></div>
+      <div class="swatch-name">Blanc</div>
+      <div class="swatch-hex">#FFFFFF</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#F5F5F5; border: 0.5px solid #ddd;"></div>
+      <div class="swatch-name">Gris clair</div>
+      <div class="swatch-hex">#F5F5F5</div>
+    </div>
+  </div>
+
+  <div class="section-label">Accent & couleurs vives</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#C8FF00;"></div>
+      <div class="swatch-name">Vert acide</div>
+      <div class="swatch-hex">#C8FF00</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#FF4D00;"></div>
+      <div class="swatch-name">Orange vif</div>
+      <div class="swatch-hex">#FF4D00</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#7B61FF;"></div>
+      <div class="swatch-name">Violet électrique</div>
+      <div class="swatch-hex">#7B61FF</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#00D4FF;"></div>
+      <div class="swatch-name">Cyan tech</div>
+      <div class="swatch-hex">#00D4FF</div>
+    </div>
+  </div>
+
+  <div class="section-label">Teintes neutres</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#222222;"></div>
+      <div class="swatch-name">Gris sombre</div>
+      <div class="swatch-hex">#222222</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#444444;"></div>
+      <div class="swatch-name">Gris moyen</div>
+      <div class="swatch-hex">#444444</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#888888;"></div>
+      <div class="swatch-name">Gris texte</div>
+      <div class="swatch-hex">#888888</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <p class="note">⚠️ Estimation visuelle basée sur les captures d'écran disponibles. Le site utilise un design sombre (dark mode natif) avec des accents néon typiques du branding "tech studio".</p>
+</div>
