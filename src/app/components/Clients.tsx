@@ -29,12 +29,12 @@ export function Clients() {
           </h2>
 
           {/* Animation de texte fluide */}
-          <div className="relative h-32 flex items-center justify-center overflow-hidden">
+          <div className="relative h-28 sm:h-36 lg:h-44 flex items-center justify-center overflow-hidden">
             <div
-              className={`text-6xl lg:text-8xl font-light transition-all duration-500 ${
+              className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-tight py-4 px-2 inline-block transition-all duration-500 ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 -translate-y-8'
+                  : 'opacity-0 -translate-y-6'
               }`}
               style={{
                 background: 'linear-gradient(135deg, #191924 0%, #444444 100%)',
