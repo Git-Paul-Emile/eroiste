@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ImageWithFallback } from '../figma/ImageWithFallback'
 import { ServiceNavSlider } from '../ServiceNavSlider'
+import heroImage from '../../../imports/media/brand-direction-artistique.jpg'
 
 interface AnimationServiceProps {
   onNavigate?: (service: string) => void
@@ -81,7 +82,7 @@ export function AnimationService({ onNavigate }: AnimationServiceProps) {
             <div className="relative">
               <div className="overflow-hidden rounded-lg">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1761882725885-d3d8bd2032d1?w=1080&q=80"
+                  src={heroImage}
                   alt="Brand & Art Direction"
                   className="w-full h-auto rounded-lg"
                 />

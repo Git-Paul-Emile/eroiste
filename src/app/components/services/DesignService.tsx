@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { ImageWithFallback } from '../figma/ImageWithFallback'
 import { ServiceNavSlider } from '../ServiceNavSlider'
-import heroVideo from '../../../imports/Tablet_screen_displaying_UI_anim__202609061706.mp4'
+import heroVideo from '../../../imports/media/experience.mp4'
 
 interface DesignServiceProps {
   onNavigate?: (service: string) => void

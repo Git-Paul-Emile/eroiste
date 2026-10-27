@@ -21,7 +21,7 @@ const articles: Article[] = [
   {
     id: 1,
     title: "Stratégies de croissance pour les entreprises africaines à l'ère de l'Intelligence Artificielle",
-    excerpt: "L'Afrique ne gagnera pas en copiant la Silicon Valley, mais en construisant son propre modèle de croissance. Depuis plusieurs années, la Silicon Valley influence profondément la manière dont les entrepreneurs du monde entier pensent la création d'entreprise — mais peut-on appliquer directement ces modèles aux réalités africaines ?",
+    excerpt: "L'Afrique ne gagnera pas en copiant la Silicon Valley, mais en construisant son propre modèle de croissance. Depuis plusieurs années, la Silicon Valley influence profondément la manière dont les entrepreneurs du monde entier pensent la création d'entreprise, mais peut-on appliquer directement ces modèles aux réalités africaines ?",
     category: "Stratégie",
     date: "12 juillet 2025",
     readTime: "12 min",

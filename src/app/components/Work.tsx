@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react'
 import { X, Grid3x3, List, ArrowUpRight, ArrowRight } from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
+import samsErpCover from '../../imports/media/sams-erp.jpg'
+import agentTrackerCover from '../../imports/media/agent-tracker.png'
+import studiosKouratierCover from '../../imports/media/studios-kouratier.svg'
 
 interface Project {
   id: number
@@ -15,6 +18,10 @@ interface Project {
   images: string[]
   liveUrl: string
   size: 'large' | 'small'
+  // Logos/vectoriels : affichés entiers plutôt que recadrés
+  fit?: 'cover' | 'contain'
+  // Point focal pour les visuels recadrés (ex. écrans mobiles verticaux)
+  position?: string
 }
 
 const projects: Project[] = [
@@ -25,8 +32,8 @@ const projects: Project[] = [
     year: "2025",
     client: "Savonnerie Moderne du Sénégal",
     description: "ERP industriel sur mesure conçu pour centraliser l'ensemble des activités d'un fabricant de produits d'hygiène : production, stocks, achats, ventes, finance et facturation. Pilotage en temps réel via des tableaux de bord et indicateurs de performance.",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"],
+    thumbnail: samsErpCover,
+    images: [samsErpCover],
     liveUrl: "#",
     size: "large"
   },
@@ -37,10 +44,11 @@ const projects: Project[] = [
     year: "2025",
     client: "Agent Tracker",
     description: "Refonte complète de l'expérience utilisateur d'une application de pilotage des équipes commerciales terrain. Architecture de l'information repensée, approche media-first et interface optimisée pour un usage quotidien sur mobile et tablette.",
-    thumbnail: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
-    images: ["https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200"],
+    thumbnail: agentTrackerCover,
+    images: [agentTrackerCover],
     liveUrl: "#",
-    size: "small"
+    size: "small",
+    position: "center 48%"
   },
   {
     id: 3,
@@ -49,10 +57,11 @@ const projects: Project[] = [
     year: "2025",
     client: "Studios Kouratier",
     description: "Conception d'une identité visuelle complète pour une agence audiovisuelle guinéenne. Logo, charte graphique, papeterie institutionnelle et système graphique évolutif pour le digital et l'impression.",
-    thumbnail: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=800",
-    images: ["https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=1200"],
+    thumbnail: studiosKouratierCover,
+    images: [studiosKouratierCover],
     liveUrl: "#",
-    size: "small"
+    size: "small",
+    fit: "contain"
   }
 ]
 
@@ -186,7 +195,8 @@ export function Work({ onNavigateToContact }: WorkProps = {}) {
                     <ImageWithFallback
                       src={project.thumbnail}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ objectPosition: project.position }}
+                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${project.fit === 'contain' ? 'object-contain p-8 bg-white' : 'object-cover'}`}
                     />
                     
                     {/* Overlay au hover */}
@@ -306,7 +316,8 @@ export function Work({ onNavigateToContact }: WorkProps = {}) {
               <ImageWithFallback
                 src={selectedProject.images[0]}
                 alt={selectedProject.title}
-                className="w-full h-full object-cover"
+                style={{ objectPosition: selectedProject.position }}
+                className={`w-full h-full ${selectedProject.fit === 'contain' ? 'object-contain p-10 bg-white' : 'object-cover'}`}
               />
             </div>
 

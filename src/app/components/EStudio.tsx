@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, ArrowUpRight, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 const ventures = [
   {
@@ -28,7 +28,7 @@ const ventures = [
       "Live streaming events intégré",
     ],
     problem: "Les organisateurs d'événements africains n'ont aucun outil centralisé pour vendre, promouvoir et gérer leurs événements. La vente de billets se fait encore majoritairement en cash ou via WhatsApp.",
-    vision: "Devenir le Ticketmaster africain — la référence incontournable pour tout événement culturel, sportif ou artistique sur le continent.",
+    vision: "Devenir le Ticketmaster africain : la référence incontournable pour tout événement culturel, sportif ou artistique sur le continent.",
   },
   {
     number: "02",
@@ -54,7 +54,7 @@ const ventures = [
       "Gestion des droits et licences",
     ],
     problem: "Les créateurs africains produisent des contenus de qualité mondiale mais ne peuvent pas les monétiser correctement. Les plateformes globales ne sont pas adaptées aux réalités de paiement locales.",
-    vision: "La première plateforme de streaming africaine qui met les créateurs au centre — un Netflix-meets-Patreon conçu pour le continent.",
+    vision: "La première plateforme de streaming africaine qui met les créateurs au centre : un Netflix-meets-Patreon conçu pour le continent.",
   },
   {
     number: "03",
@@ -80,7 +80,7 @@ const ventures = [
       "API ouverte pour partenaires logistiques",
     ],
     problem: "Les opérateurs de transport africains gèrent leurs flottes avec des carnets papier. Aucune visibilité sur les revenus, les trajets ou l'état des véhicules. Une inefficacité qui coûte des milliards chaque année.",
-    vision: "L'OS du transport africain — la plateforme qui structure la mobilité de 1,4 milliard de personnes.",
+    vision: "L'OS du transport africain : la plateforme qui structure la mobilité de 1,4 milliard de personnes.",
   },
   {
     number: "04",
@@ -106,7 +106,7 @@ const ventures = [
       "Contrats intelligents pour le partage de royalties",
     ],
     problem: "Des artistes africains génèrent des centaines de millions de streams sans recevoir les royalties correspondantes. L'absence d'infrastructure de gestion des droits coûte des revenus considérables à l'industrie musicale africaine.",
-    vision: "Le système d'exploitation de l'industrie musicale africaine — donnant aux créateurs le contrôle total de leur catalogue et de leurs revenus.",
+    vision: "Le système d'exploitation de l'industrie musicale africaine, donnant aux créateurs le contrôle total de leur catalogue et de leurs revenus.",
   },
 ];
 
@@ -140,14 +140,13 @@ function VentureDetail({ venture, onBack, onNavigateToQuote }: { venture: Ventur
 
         {/* Status tag */}
         <div className="absolute top-8 right-8 z-10" style={{ paddingTop: '80px' }}>
-          <span className="text-xs font-mono uppercase tracking-widest text-white/70 bg-white/10 backdrop-blur px-3 py-1.5 rounded-full border border-white/15">
+          <span className="text-xs uppercase tracking-widest text-white/70 bg-white/10 backdrop-blur px-3 py-1.5 rounded-full border border-white/15">
             {venture.status}
           </span>
         </div>
 
         {/* Title */}
         <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
-          <p className="text-xs font-mono uppercase tracking-[0.2em] text-white/50 mb-3">{venture.tag}</p>
           <h1 className="text-white leading-none tracking-tight" style={{ fontSize: 'clamp(40px, 7vw, 96px)', fontWeight: 700 }}>
             <span className="text-white/40">{venture.number}/</span> {venture.name}
           </h1>
@@ -160,7 +159,6 @@ function VentureDetail({ venture, onBack, onNavigateToQuote }: { venture: Ventur
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#1B5BFF] font-mono mb-6">Le projet</p>
             <p className="text-xl lg:text-2xl text-[#191924] leading-relaxed font-light">
               {venture.description}
             </p>
@@ -173,7 +171,7 @@ function VentureDetail({ venture, onBack, onNavigateToQuote }: { venture: Ventur
               {venture.metrics.map((m) => (
                 <div key={m.label}>
                   <p className="text-2xl font-bold text-[#191924]">{m.value}</p>
-                  <p className="text-xs text-[#9A9A9A] mt-1 font-mono uppercase tracking-wide">{m.label}</p>
+                  <p className="text-xs text-[#9A9A9A] mt-1 uppercase tracking-wide">{m.label}</p>
                 </div>
               ))}
             </div>
@@ -183,19 +181,19 @@ function VentureDetail({ venture, onBack, onNavigateToQuote }: { venture: Ventur
           <div className="space-y-12">
             {/* Problem */}
             <div className="bg-[#F7F7F7] rounded-2xl p-8">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#AAAAAA] font-mono mb-4">Le problème</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[#AAAAAA] mb-4">Le problème</p>
               <p className="text-base text-[#191924] leading-relaxed">{venture.problem}</p>
             </div>
 
             {/* Vision */}
             <div className="bg-[#191924] rounded-2xl p-8">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#1B5BFF] font-mono mb-4">La vision</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[#1B5BFF] mb-4">La vision</p>
               <p className="text-base text-white leading-relaxed">{venture.vision}</p>
             </div>
 
             {/* Features */}
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-[#AAAAAA] font-mono mb-6">Fonctionnalités clés</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[#AAAAAA] mb-6">Fonctionnalités clés</p>
               <ul className="space-y-3">
                 {venture.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-[#4A4A4A]">
@@ -254,10 +252,9 @@ export function EStudio({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero — large editorial headline */}
+      {/* Hero : large editorial headline */}
       <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8 border-b border-[rgba(25,25,36,0.07)]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#1B5BFF] font-mono mb-8"></p>
           <h1
             className="leading-none tracking-tight mb-10"
             style={{ fontSize: "clamp(42px, 7vw, 96px)" }}
@@ -332,28 +329,8 @@ export function EStudio({
                       style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.08) 100%)' }}
                     />
 
-                    {/* Top row: tag left + arrow right */}
-                    <div className="absolute top-0 left-0 right-0 p-4 flex items-start justify-between">
-                      <span
-                        className="text-[10px] font-mono uppercase tracking-wider text-white/85 px-2.5 py-1 rounded-full"
-                        style={{ background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.15)' }}
-                      >
-                        {venture.tag}
-                      </span>
-                      <button
-                        onClick={() => setSelectedVenture(venture)}
-                        className="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:scale-110"
-                        style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.2)' }}
-                      >
-                        <ArrowUpRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-
                     {/* Bottom content */}
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <p className="text-white/50 text-[11px] font-bold font-mono mb-1.5">
-                        {venture.number}/
-                      </p>
                       <h3 className="text-white font-bold leading-tight mb-1" style={{ fontSize: 'clamp(15px, 2vw, 19px)' }}>
                         {venture.name}
                       </h3>
@@ -370,7 +347,6 @@ export function EStudio({
                         }}
                       >
                         Explorer
-                        <span className="w-1 h-1 rounded-full bg-white/70" />
                       </button>
                     </div>
                   </div>
@@ -381,15 +357,12 @@ export function EStudio({
         </div>
       </section>
 
-      {/* How we build — numbered list */}
+      {/* How we build : numbered list */}
       <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left */}
             <div className="lg:sticky lg:top-28">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#AAAAAA] font-mono mb-4">
-                LE PROBLEMES
-              </p>
               <h2
                 className="font-bold text-[#191924] leading-tight tracking-tight"
                 style={{ fontSize: "clamp(30px, 4vw, 52px)" }}
@@ -405,14 +378,14 @@ export function EStudio({
               {onNavigateToQuote && (
                 <button
                   onClick={onNavigateToQuote}
-                  className="mt-8 text-sm font-mono text-[#191924] underline underline-offset-4 hover:text-[#1B5BFF] transition-colors"
+                  className="mt-8 text-sm font-semibold text-[#191924] underline underline-offset-4 hover:text-[#1B5BFF] transition-colors"
                 >
                   Rejoindre l'E.Venture
                 </button>
               )}
             </div>
 
-            {/* Right — numbered steps */}
+            {/* Right : numbered steps */}
             <div className="space-y-0 divide-y divide-[rgba(25,25,36,0.07)]">
               {[
                 {

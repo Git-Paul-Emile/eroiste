@@ -10,6 +10,9 @@ import { ThemeToggle } from './ThemeToggle'
 import logoLight from '../../imports/logo_1.png'
 import logoDark from '../../imports/logo_4.png'
 import logo2 from '../../imports/logo_2.svg'
+import samsErpCover from '../../imports/media/sams-erp.jpg'
+import agentTrackerCover from '../../imports/media/agent-tracker.png'
+import studiosKouratierCover from '../../imports/media/studios-kouratier.svg'
 
 interface HeaderProps {
   isDark: boolean
@@ -104,17 +107,19 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
     {
       title: 'SAMS ERP',
       category: 'Web & App · AI & Tech · 2025',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080&q=80'
+      image: samsErpCover
     },
     {
       title: 'Agent Tracker',
       category: 'Mobile · UX Design · 2025',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1080&q=80'
+      image: agentTrackerCover,
+      position: 'center 48%'
     },
     {
       title: 'Studios Kouratier',
       category: 'Branding · Identité visuelle · 2025',
-      image: 'https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=1080&q=80'
+      image: studiosKouratierCover,
+      contain: true
     }
   ]
 
@@ -210,7 +215,7 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
               </button>
             </div>
 
-            {/* Right — hamburger */}
+            {/* Right : hamburger */}
             <div className="flex items-center">
               <Button
                 variant="ghost"
@@ -386,7 +391,8 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
                     key={work.title}
                     src={work.image}
                     alt={work.title}
-                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${
+                    style={{ objectPosition: work.position }}
+                    className={`absolute inset-0 w-full h-full transition-all duration-1000 ${work.contain ? 'object-contain p-8 pb-28 bg-white' : 'object-cover'} ${
                       index === currentWorkIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
                     }`}
                   />

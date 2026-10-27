@@ -155,7 +155,7 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
         }}
       />
 
-      {/* 3D stage — upper portion */}
+      {/* 3D stage : upper portion */}
       <div
         className="relative z-10 flex items-center justify-center"
         style={{
@@ -166,7 +166,7 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
           marginTop: '6vh',
         }}
       >
-        {/* Card anchor — all cards are absolutely positioned relative to this */}
+        {/* Card anchor : all cards are absolutely positioned relative to this */}
         <div style={{ position: 'relative', width: CARD_W, height: CARD_H }}>
           {slides.map((slide, i) => {
             const offset = circularOffset(i, active)
@@ -233,7 +233,7 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
                     textTransform: 'uppercase',
                     letterSpacing: '0.15em',
                     marginBottom: 5,
-                    fontFamily: 'JetBrains Mono, monospace',
+                    fontFamily: "Inter, system-ui, sans-serif",
                   }}>
                     {slide.tag}
                   </p>
@@ -254,7 +254,7 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
         </div>
       </div>
 
-      {/* Bottom bar — title left, dots right */}
+      {/* Bottom bar : title left, dots right */}
       <div
         className="relative z-10 w-full flex items-end justify-between mt-10 mb-10"
         style={{
@@ -263,7 +263,7 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
           gap: 24,
         }}
       >
-        {/* Title — left, editorial */}
+        {/* Title : left, editorial */}
         <h1
           style={{
             fontFamily: 'Inter, system-ui, sans-serif',
@@ -283,7 +283,7 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
           </span>
         </h1>
 
-        {/* Dots — right, vertically centered with title */}
+        {/* Dots : right, vertically centered with title */}
         <div className="flex items-center gap-2 flex-shrink-0 pb-1">
           {slides.map((_, i) => (
             <button

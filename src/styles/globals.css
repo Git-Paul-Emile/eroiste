@@ -1,11 +1,11 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ============================================
-   KAANARI THEME — TECH STUDIO DARK MODE
+   KAANARI THEME : TECH STUDIO DARK MODE
    ============================================ */
 
 :root {
-  /* Fonds — Noir profond */
+  /* Fonds : Noir profond */
   --color-bg-primary: #191924;
   --color-bg-secondary: #111111;
   --color-bg-tertiary: #222222;
@@ -155,7 +155,7 @@
 }
 
 /**
- * Base typography — Système de typographie cohérent
+ * Base typography : Système de typographie cohérent
  */
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {

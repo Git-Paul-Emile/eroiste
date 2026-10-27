@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ImageWithFallback } from '../figma/ImageWithFallback'
 import { ServiceNavSlider } from '../ServiceNavSlider'
+import heroVideo from '../../../imports/media/cybersecurite.mp4'
 
 interface AIBlockchainServiceProps {
   onNavigate?: (service: string) => void
@@ -84,9 +85,12 @@ export function AIBlockchainService({ onNavigate }: AIBlockchainServiceProps) {
             </div>
             <div className="relative">
               <div className="overflow-hidden rounded-lg">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?w=1080&q=80"
-                  alt="Cybersecurity"
+                <video
+                  src={heroVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-auto rounded-lg"
                 />
               </div>

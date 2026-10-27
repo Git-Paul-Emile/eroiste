@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ImageWithFallback } from '../figma/ImageWithFallback'
 import { ServiceNavSlider } from '../ServiceNavSlider'
+import heroVideo from '../../../imports/media/strategie-transformation.mp4'
 
 interface AnalyticsServiceProps {
   onNavigate?: (service: string) => void
@@ -61,7 +62,7 @@ export function AnalyticsService({ onNavigate }: AnalyticsServiceProps) {
                 Décider avec clarté. Avancer avec cohérence.
               </p>
               <p className="text-base text-[#444240] leading-relaxed">
-                Nous travaillons aux côtés des dirigeants pour aligner vision, marque et produit autour d'une stratégie actionnée. Audit, positionnement, feuille de route : notre méthode traduit les ambitions en décisions concrètes et les décisions en résultats mesurables. Nous ne livrons pas des recommandations — nous construisons les conditions de leur exécution, en restant engagés aux côtés de vos équipes à chaque étape de la transformation.
+                Nous travaillons aux côtés des dirigeants pour aligner vision, marque et produit autour d'une stratégie actionnée. Audit, positionnement, feuille de route : notre méthode traduit les ambitions en décisions concrètes et les décisions en résultats mesurables. Nous ne livrons pas des recommandations, nous construisons les conditions de leur exécution, en restant engagés aux côtés de vos équipes à chaque étape de la transformation.
               </p>
               <div className="space-y-4 pt-8">
                 {services.map((service, index) => (
@@ -88,9 +89,12 @@ export function AnalyticsService({ onNavigate }: AnalyticsServiceProps) {
             </div>
             <div className="relative">
               <div className="overflow-hidden rounded-lg">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1763739527737-e3626d731072?w=1080&q=80"
-                  alt="Strategic Direction"
+                <video
+                  src={heroVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-auto rounded-lg"
                 />
               </div>
