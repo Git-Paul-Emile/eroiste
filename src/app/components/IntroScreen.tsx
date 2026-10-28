@@ -142,7 +142,7 @@ export function IntroScreen({ onComplete }: IntroScreenProps) {
                       initial={{ opacity: 0, letterSpacing: '0.2em' }}
                       animate={{ opacity: 0.5, letterSpacing: '0.4em' }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className="text-[#F0EDE6] text-xs mb-8 tracking-[0.4em] font-mono"
+                      className="text-[#F0EDE6] text-xs mb-8 tracking-[0.4em]"
                     >
                       {statement.label}
                     </motion.div>
@@ -197,7 +197,7 @@ export function IntroScreen({ onComplete }: IntroScreenProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
-            className="absolute top-8 left-1/2 -translate-x-1/2 text-[#F0EDE6]/40 text-xs tracking-[0.3em] pointer-events-none font-mono"
+            className="absolute top-8 left-1/2 -translate-x-1/2 text-[#F0EDE6]/40 text-xs tracking-[0.3em] pointer-events-none"
           >
             <motion.span
               animate={{ opacity: [0.4, 0.8, 0.4] }}

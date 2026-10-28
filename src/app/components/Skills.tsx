@@ -344,7 +344,7 @@ export function Skills() {
                 className="group p-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-12 h-12 bg-white dark:bg-gray-900 rounded-lg mx-auto mb-3 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xs font-mono text-gray-600 dark:text-gray-400">
+                  <span className="text-xs text-gray-600 dark:text-gray-400">
                     {tech.slice(0, 2).toUpperCase()}
                   </span>
                 </div>

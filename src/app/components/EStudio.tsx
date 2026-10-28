@@ -288,16 +288,15 @@ export function EStudio({
       {/* Ventures cards row */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#EFEFEF]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col sm:flex-row gap-3 items-end justify-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:items-end max-w-[1120px] mx-auto">
             {ventures.map((venture, idx) => {
-              const offsets = [0, -32, -14, -42]
-              const offset = offsets[idx % offsets.length]
+              // Décalage en escalier uniquement sur grand écran
+              const offsets = ['', 'lg:-translate-y-8', 'lg:-translate-y-[14px]', 'lg:-translate-y-[42px]']
 
               return (
                 <div
                   key={venture.number}
-                  className="group relative flex-1 min-w-[200px] max-w-[270px] cursor-pointer"
-                  style={{ marginBottom: Math.abs(offset), transform: `translateY(${offset}px)` }}
+                  className={`group relative cursor-pointer ${offsets[idx % offsets.length]}`}
                 >
                   <div
                     className="relative overflow-hidden"

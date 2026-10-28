@@ -1,41 +1,55 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import designVideo from '../../imports/media/experience.mp4'
+import strategyVideo from '../../imports/media/strategie-transformation.mp4'
+import brandImage from '../../imports/media/brand-direction-artistique.jpg'
+import engineeringVideo from '../../imports/media/ingenierie-technologie.mp4'
+import cyberVideo from '../../imports/media/cybersecurite.mp4'
 
 const slides = [
   {
     id: 0,
     title: "Concevoir l'Afrique de demain.",
     tag: "Design & Expérience Digitale",
-    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&q=90",
+    // Mêmes médias que les pages services
+    video: designVideo,
   },
   {
     id: 1,
     title: "Système d'abord, IA ensuite.",
     tag: "Stratégie & Transformation",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=90",
+    video: strategyVideo,
   },
   {
     id: 2,
     title: "Une marque qui ne se voit pas.",
     tag: "Brand & Direction Artistique",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=90",
+    image: brandImage,
   },
   {
     id: 3,
     title: "Des systèmes qui tiennent la charge.",
     tag: "Ingénierie & Technologie",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=90",
+    video: engineeringVideo,
   },
   {
     id: 4,
     title: "Bâtir les réseaux numériques africains.",
     tag: "Cybersécurité & Résilience",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=90",
+    video: cyberVideo,
   },
 ]
 
 const N = slides.length
+
+const mediaStyle: React.CSSProperties = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  display: 'block',
+  pointerEvents: 'none',
+}
 const VISIBLE = 2       // cards shown on each side of center
 const CARD_W = 240
 const CARD_H = 370
@@ -204,18 +218,24 @@ export function HeroSlider({ onNavigateToQuote }: HeroSliderProps = {}) {
                     : '0 20px 60px rgba(0,0,0,0.7)',
                 }}
               >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  draggable={false}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block',
-                    pointerEvents: 'none',
-                  }}
-                />
+                {slide.video ? (
+                  <video
+                    src={slide.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    aria-label={slide.title}
+                    style={mediaStyle}
+                  />
+                ) : (
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    draggable={false}
+                    style={mediaStyle}
+                  />
+                )}
                 {/* Bottom text gradient */}
                 <div
                   style={{

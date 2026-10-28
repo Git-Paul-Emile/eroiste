@@ -233,13 +233,12 @@ export function Contact() {
                         className="w-full bg-transparent border-0 border-b-2 border-[rgba(240,237,230,0.12)] rounded-none px-0 py-4 pr-8 text-[#F0EDE6] text-lg focus:border-[#1B5BFF] focus:ring-0 transition-all duration-300 appearance-none cursor-pointer group-hover:border-[rgba(240,237,230,0.25)]"
                       >
                         <option value="" className="bg-[#111111] text-[#8A8780]">Sélectionner...</option>
-                        <option value="digital-conception" className="bg-[#111111] text-[#F0EDE6] py-2">Digital & Conception</option>
-                        <option value="technologie" className="bg-[#111111] text-[#F0EDE6] py-2">Technologie</option>
-                        <option value="brand-art-direction" className="bg-[#111111] text-[#F0EDE6] py-2">Brand & Art Direction</option>
-                        <option value="direction-strategie" className="bg-[#111111] text-[#F0EDE6] py-2">Direction Stratégie</option>
-                        <option value="securite-informatique" className="bg-[#111111] text-[#F0EDE6] py-2">Sécurité Informatique</option>
-                        <option value="venture-studio" className="bg-[#111111] text-[#F0EDE6] py-2">Venture Studio</option>
-                        <option value="candidature-emploi" className="bg-[#111111] text-[#F0EDE6] py-2">Candidature d'Emploi</option>
+                        <option value="design" className="bg-[#111111] text-[#F0EDE6] py-2">Design & Expérience Digitale</option>
+                        <option value="ingenierie" className="bg-[#111111] text-[#F0EDE6] py-2">Ingénierie & Technologie</option>
+                        <option value="brand" className="bg-[#111111] text-[#F0EDE6] py-2">Brand & Direction Artistique</option>
+                        <option value="strategie" className="bg-[#111111] text-[#F0EDE6] py-2">Stratégie & Transformation Digitale</option>
+                        <option value="cybersecurite" className="bg-[#111111] text-[#F0EDE6] py-2">Cybersécurité & Résilience Numérique</option>
+                        <option value="nous-rejoindre" className="bg-[#111111] text-[#F0EDE6] py-2">Nous rejoindre</option>
                       </select>
                       <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
                         <svg width="14" height="9" viewBox="0 0 14 9" fill="none">

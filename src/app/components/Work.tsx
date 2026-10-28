@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { X, Grid3x3, List, ArrowUpRight, ArrowRight } from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import samsErpCover from '../../imports/media/sams-erp.jpg'
-import agentTrackerCover from '../../imports/media/agent-tracker.png'
+import agentTrackerCover from '../../imports/media/agent-tracker-wireframes.jpg'
 import studiosKouratierCover from '../../imports/media/studios-kouratier.svg'
 
 interface Project {
@@ -20,8 +20,6 @@ interface Project {
   size: 'large' | 'small'
   // Logos/vectoriels : affichés entiers plutôt que recadrés
   fit?: 'cover' | 'contain'
-  // Point focal pour les visuels recadrés (ex. écrans mobiles verticaux)
-  position?: string
 }
 
 const projects: Project[] = [
@@ -47,8 +45,7 @@ const projects: Project[] = [
     thumbnail: agentTrackerCover,
     images: [agentTrackerCover],
     liveUrl: "#",
-    size: "small",
-    position: "center 48%"
+    size: "small"
   },
   {
     id: 3,
@@ -195,7 +192,6 @@ export function Work({ onNavigateToContact }: WorkProps = {}) {
                     <ImageWithFallback
                       src={project.thumbnail}
                       alt={project.title}
-                      style={{ objectPosition: project.position }}
                       className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${project.fit === 'contain' ? 'object-contain p-8 bg-white' : 'object-cover'}`}
                     />
                     
@@ -316,7 +312,6 @@ export function Work({ onNavigateToContact }: WorkProps = {}) {
               <ImageWithFallback
                 src={selectedProject.images[0]}
                 alt={selectedProject.title}
-                style={{ objectPosition: selectedProject.position }}
                 className={`w-full h-full ${selectedProject.fit === 'contain' ? 'object-contain p-10 bg-white' : 'object-cover'}`}
               />
             </div>
@@ -352,7 +347,7 @@ export function Work({ onNavigateToContact }: WorkProps = {}) {
                 href={selectedProject.liveUrl}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#191924] text-[#F0EDE6] rounded-full font-semibold hover:bg-[#191924]/90 transition-all duration-300"
               >
-                View Live
+                Voir le projet
                 <ArrowUpRight className="w-5 h-5" />
               </a>
             </div>

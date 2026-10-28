@@ -244,7 +244,7 @@ export function LuxuryBrandCase({ onBack }: CasePageProps) {
                     <div>
                       <h4 className="font-medium text-foreground">{color.name}</h4>
                       <p className="text-sm text-muted-foreground">{color.description}</p>
-                      <p className="text-xs font-mono text-muted-foreground mt-1">{color.color}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{color.color}</p>
                     </div>
                   </div>
                 ))}

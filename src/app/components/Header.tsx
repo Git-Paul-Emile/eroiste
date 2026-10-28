@@ -11,7 +11,7 @@ import logoLight from '../../imports/logo_1.png'
 import logoDark from '../../imports/logo_4.png'
 import logo2 from '../../imports/logo_2.svg'
 import samsErpCover from '../../imports/media/sams-erp.jpg'
-import agentTrackerCover from '../../imports/media/agent-tracker.png'
+import agentTrackerCover from '../../imports/media/agent-tracker-wireframes.jpg'
 import studiosKouratierCover from '../../imports/media/studios-kouratier.svg'
 
 interface HeaderProps {
@@ -112,8 +112,7 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
     {
       title: 'Agent Tracker',
       category: 'Mobile · UX Design · 2025',
-      image: agentTrackerCover,
-      position: 'center 48%'
+      image: agentTrackerCover
     },
     {
       title: 'Studios Kouratier',
@@ -232,7 +231,7 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
 
       {/* Fullscreen Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 z-50 overflow-y-auto overscroll-contain transition-all duration-500 ease-in-out ${
           isMenuOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -367,7 +366,7 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
             {/* Middle column: Project slider */}
             <div className="lg:col-span-4">
               <div
-                className="mb-6 uppercase tracking-wider text-gray-500 text-xs font-mono"
+                className="mb-6 uppercase tracking-wider text-gray-500 text-xs"
                 style={{
                   opacity: isMenuOpen ? 1 : 0,
                   transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
@@ -391,7 +390,6 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
                     key={work.title}
                     src={work.image}
                     alt={work.title}
-                    style={{ objectPosition: work.position }}
                     className={`absolute inset-0 w-full h-full transition-all duration-1000 ${work.contain ? 'object-contain p-8 pb-28 bg-white' : 'object-cover'} ${
                       index === currentWorkIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
                     }`}
@@ -401,7 +399,7 @@ export function Header({ isDark, onThemeToggle, currentPage, onPageChange }: Hea
 
                 {/* Info overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-xs font-mono text-white/50 uppercase tracking-widest mb-1">
+                  <p className="text-xs text-white/50 uppercase tracking-widest mb-1">
                     {featuredWorks[currentWorkIndex].category}
                   </p>
                   <p className="text-xl font-light text-[#F0EDE6] mb-4 group-hover:text-[#1B5BFF] transition-colors duration-300">

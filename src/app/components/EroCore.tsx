@@ -129,7 +129,7 @@ export function EroCore({
             </p>
             <button
               onClick={onNavigateToQuote}
-              className="group inline-flex items-center gap-3 text-sm font-medium text-[#1B5BFF] uppercase tracking-widest font-mono hover:gap-5 transition-all duration-300"
+              className="group inline-flex items-center gap-3 text-base font-semibold text-[#1B5BFF] hover:gap-4 transition-all duration-300"
             >
               Activer votre Core
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -141,19 +141,13 @@ export function EroCore({
       {/* Core offerings */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xs uppercase tracking-[0.25em] text-[#444] mb-16 font-mono"></h2>
           <div className="space-y-0 divide-y divide-white/5">
             {cores.map((core) => (
               <div
                 key={core.tag}
                 className="group py-10 grid lg:grid-cols-12 gap-6 hover:bg-white/[0.02] -mx-4 px-4 transition-colors duration-300"
               >
-                <div className="lg:col-span-1">
-                  <span className="text-xs font-mono text-[#333]">
-                    {core.tag}
-                  </span>
-                </div>
-                <div className="lg:col-span-4">
+                <div className="lg:col-span-5">
                   <h3 className="text-2xl font-light text-[#F0EDE6] group-hover:text-[#1B5BFF] transition-colors duration-300">
                     {core.name}
                   </h3>
@@ -168,7 +162,7 @@ export function EroCore({
                     {core.services.map((s) => (
                       <li
                         key={s}
-                        className="text-xs text-[#444] font-mono"
+                        className="text-sm text-[#8A8780]"
                       >
                         {s}
                       </li>
@@ -202,18 +196,15 @@ export function EroCore({
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {levels.map((level, i) => (
+            {levels.map((level) => (
               <div
                 key={level.name}
-                className="p-8 border border-[rgba(8,8,8,0.08)] bg-white group hover:border-[#1B5BFF] transition-colors duration-300"
+                className="p-8 rounded-lg bg-white group hover:scale-[1.03] transition-transform duration-300"
               >
-                <div className="text-xs font-mono text-[#1B5BFF] mb-4">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
                 <h3 className="text-lg font-semibold text-[#191924] mb-1">
                   {level.name}
                 </h3>
-                <p className="text-xs text-[#888] uppercase tracking-wide mb-4">
+                <p className="text-sm text-[#6B6B6B] mb-4">
                   {level.target}
                 </p>
                 <p className="text-sm text-[#444240] leading-relaxed">
@@ -228,8 +219,8 @@ export function EroCore({
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-[#191924]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#444] font-mono mb-6">
-            Prêt à devenir le ROI,
+          <p className="text-lg text-[#8A8780] mb-6">
+            Prêt à devenir le ROI ?
           </p>
           <h2 className="text-4xl lg:text-6xl font-light text-[#F0EDE6] leading-tight mb-8">
             Quel Core
@@ -238,7 +229,7 @@ export function EroCore({
           </h2>
           <button
             onClick={onNavigateToQuote}
-            className="group inline-flex items-center gap-3 bg-[#1B5BFF] text-white text-sm font-medium uppercase tracking-widest px-8 py-4 hover:bg-[#1B5BFF]/90 transition-all duration-300"
+            className="group inline-flex items-center gap-3 rounded-md bg-[#1B5BFF] text-white text-base font-semibold px-8 py-4 hover:bg-[#1B5BFF]/90 transition-all duration-300"
           >
             Parler à notre équipe
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
