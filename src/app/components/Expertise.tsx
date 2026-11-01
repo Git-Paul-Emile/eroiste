@@ -100,7 +100,7 @@ export function Expertise({ onServiceClick }: ExpertiseProps) {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Icon container */}
-              <div className="w-[66px] h-[66px] rounded-2xl flex items-center justify-center mb-6 bg-[#1A1A1A]">
+              <div className="mb-6 flex items-center">
                 <div className={`${feature.iconColor}`}>
                   {feature.icon}
                 </div>

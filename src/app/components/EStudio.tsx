@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import logoFeetiStore from "../../imports/LOGO-SITE_1.jpg";
+import logoFeetiPlay from "../../imports/LOGO-SITE_2.jpg";
+import logoZougo from "../../imports/LOGO-SITE_3.jpg";
+import logoOraleOs from "../../imports/LOGO-SITE_4.jpg";
 
 const ventures = [
   {
@@ -10,7 +14,7 @@ const ventures = [
     category: "Billetterie & Événementiel",
     tag: "culture & divertissement",
     status: "Beta",
-    image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=900&q=85",
+    image: logoFeetiStore,
     description:
       "Plateforme numérique tout-en-un dédiée à la promotion, la billetterie et la diffusion d'événements culturels, artistiques et sportifs en Afrique.",
     longDescription:
@@ -36,7 +40,7 @@ const ventures = [
     category: "Streaming & Contenu",
     tag: "médias & créateurs",
     status: "Lancement 2026",
-    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&q=85",
+    image: logoFeetiPlay,
     description:
       "Une plateforme permettant aux créateurs africains de monétiser directement leurs contenus grâce à un modèle pay-per-content et abonnement.",
     longDescription:
@@ -62,7 +66,7 @@ const ventures = [
     category: "Infrastructure & Mobilité",
     tag: "transport & logistique",
     status: "En développement",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
+    image: logoZougo,
     description:
       "SaaS cloud qui digitalise le transport en Afrique subsaharienne. Une infrastructure pensée pour les acteurs de la mobilité urbaine et interurbaine.",
     longDescription:
@@ -88,7 +92,7 @@ const ventures = [
     category: "Infrastructure & IA",
     tag: "IA & industrie musicale",
     status: "En développement",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&q=85",
+    image: logoOraleOs,
     description:
       "Infrastructure numérique intelligente pour structurer et accélérer l'industrie musicale africaine grâce à l'intelligence artificielle.",
     longDescription:

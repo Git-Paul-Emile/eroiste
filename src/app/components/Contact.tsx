@@ -39,8 +39,6 @@ export function Contact() {
 
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters'
     }
 
     setErrors(newErrors)
@@ -292,7 +290,6 @@ export function Contact() {
                       {errors.message}
                     </p>
                   )}
-                  <p className="mt-3 text-xs text-[#8A8780]">Minimum 10 characters</p>
                 </div>
 
                 {/* Submit Button */}
