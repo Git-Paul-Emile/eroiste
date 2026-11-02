@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import logoFeetiStore from "../../imports/LOGO-SITE_1.jpg";
+import logoFeetiStore from "../../imports/LOGO-SITE_3.jpg";
 import logoFeetiPlay from "../../imports/LOGO-SITE_2.jpg";
-import logoZougo from "../../imports/LOGO-SITE_3.jpg";
-import logoOraleOs from "../../imports/LOGO-SITE_4.jpg";
+import logoZougo from "../../imports/LOGO-SITE_1.jpg";
+import logoEkut from "../../imports/LOGO-SITE_4.jpg";
 
 const ventures = [
   {
@@ -88,15 +88,15 @@ const ventures = [
   },
   {
     number: "04",
-    name: "Orale OS",
+    name: "Ekut",
     category: "Infrastructure & IA",
     tag: "IA & industrie musicale",
     status: "En développement",
-    image: logoOraleOs,
+    image: logoEkut,
     description:
       "Infrastructure numérique intelligente pour structurer et accélérer l'industrie musicale africaine grâce à l'intelligence artificielle.",
     longDescription:
-      "L'industrie musicale africaine génère des milliards de streams mondiaux mais les artistes et labels africains ne perçoivent qu'une fraction des revenus qui leur sont dus. Orale OS est l'infrastructure qui corrige ça : gestion des droits, distribution intelligente, analytics et outils IA pour artistes et labels.",
+      "L'industrie musicale africaine génère des milliards de streams mondiaux mais les artistes et labels africains ne perçoivent qu'une fraction des revenus qui leur sont dus. Ekut est l'infrastructure qui corrige ça : gestion des droits, distribution intelligente, analytics et outils IA pour artistes et labels.",
     metrics: [
       { label: "Streams africains", value: "+40Mds/an" },
       { label: "Récupération droits", value: "IA-powered" },
